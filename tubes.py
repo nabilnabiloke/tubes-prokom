@@ -166,6 +166,20 @@ def process_file(input_path):
     print(final_output)
     return final_output
 
+if __name__ == "__main__":
+    print("=== Proses dimulai ===\n")
+
+    # Minta input file langsung dari user
+    path = input("Masukkan path file Excel / link Google Sheets: ").strip()
+
+    try:
+        output = process_file(path)
+        print("\n=== PROSES SELESAI ===")
+        print(output)
+    except Exception as e:
+        print("\n[ERROR]", e)
+
+
 
 # -------------------------------------------------------------
 # Contoh Pemanggilan
